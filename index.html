@@ -22,8 +22,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 90%; /* Adjust width for phone view */
-            max-width: 300px; /* Limit maximum width */
+            width: 300px;
             background-color: #1E1E1E;
             padding: 20px;
             border-radius: 10px;
@@ -54,13 +53,12 @@
             margin-bottom: 15px;
             position: relative;
             cursor: pointer;
-            overflow: hidden; /* Hide the rounded ends that will extend beyond the container */
         }
 
         .progress {
             height: 100%;
             background-color: #1ED760;
-            border-radius: 2px; /* Adjust border radius to match progress bar */
+            border-radius: 2px;
             position: absolute;
             top: 0;
             left: 0;
@@ -69,9 +67,8 @@
 
         .controls {
             display: flex;
-            flex-direction: column; /* Adjust to stack controls vertically */
-            align-items: center; /* Center controls horizontally */
-            justify-content: center; /* Center controls vertically */
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
             margin-top: 10px; /* Add margin to separate from timing */
         }
@@ -93,7 +90,7 @@
             background-color: transparent;
             border: none;
             cursor: pointer;
-            margin: 5px; /* Adjust button margin */
+            margin: 0 10px;
             transition: transform 0.2s ease-in-out;
             border-radius: 100%;
         }
@@ -108,7 +105,7 @@
         }
 
         /* Adjust play/pause button size */
-        #playPauseBtn {margin-top: -10px;
+        #playPauseBtn {
             width: 40px;
             height: 40px;
         }
@@ -120,19 +117,25 @@
         }
 
         img {
-            width: 100%; /* Adjust the image size */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 5%; /* Make the image circular */
+            width: 50%; /* Adjust the image size */
+            height: 50%; /* Adjust the image size */
+            border-radius: 20%; /* Make the image circular */
         }
 
         .lyrics-container {
-            display: none;
-            margin-top: 20px;
-            color: #fff;
-            font-size: 16px;
-            line-height: 1.6;
-            text-align: center;
-        }
+    display: none;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.lyrics-content {
+    max-height: 200px; /* Set a fixed height for scrolling */
+    overflow: auto; /* Enable scrolling */
+}
+
 
         .show-lyrics {
             background-color: transparent;
@@ -143,10 +146,11 @@
         }
 
         .show-lyrics:hover {
-            color: #06782e;
+            color: #fff;
         }
 
         .download-btn {
+            margin-top: 10px;
             background-color: #2632d9;
             color: #fff;
             border: none;
@@ -180,80 +184,83 @@
                 <button id="playPauseBtn"><img src="play.png" alt="Play"></button>
             </div>
             <div class="full-timing" id="fullTiming">0:00</div>
-            
         </div>
         <button class="show-lyrics" id="toggleLyricsBtn">Show Lyrics</button>
         <div class="lyrics-container" id="lyricsContainer">
-            Kouramge
-            Lonthokta Thamoina
+            <div class="lyrics-content">
+                <!-- Your lyrics content goes here -->
+                <!-- This container will enable scrolling -->
+                Kouramge <br>
+            Lonthokta Thamoina<br>
+            <br>
+            Chatlamdai gi<br>
+            Mikup Asida<br>
+            <br>
+            Kouramge<br>
+            Ningamda Punshina <br>
+            <br>
+            Laibak Fhaba Kanagi<br>
+            Khongloi<br>
+            <br>
+            Piramge<br>
+            Nuja Nangi Mangol<br>
+            <br>
+            Yaiphana Lei uko<br>
+            Nungaina Lei uko<br>
+            <br>
+            Kouramge<br>
+            Kaongamda Leinungshi<br>
+            <br>
+            Pamjaba Leikolda<br>
+            Satkhrabi<br>
+            <br>
+            Hinglage<br>
+            Nang Eigi Houkhra <br>
+            <br>
+            Wari Ningsinglaga<br>
+            Nangbu Ningsingduna<br>
+            <br>
+            Pirage Bidai<br>
+            Naphamda khudol Oina<br>
+            <br>
+            Naning Tamjakhro<br>
+            Yetlaroi Amuk Hanna<br>
+            <br>
+            Oijage Nangi<br>
+            Awaba Khuding<br>
+            Eigi<br>
 
-            Chatlamdai gi
-            Mikup Asida
-
-            Kouramge
-            Ningamda Punshina 
-
-            Laibak Fhaba Kanagi
-            Khongloi
-
-            Piramge
-            Nuja Nangi Mangol
-
-            Yaiphana Lei uko
-            Nungaina Lei uko
-
-            Kouramge
-            Kaongamda Leinungshi
-
-            Pamjaba Leikolda
-            Satkhrabi
-
-            Hinglage
-            Nang Eigi Houkhra 
-
-            Wari Ningsinglaga
-            Nangbu Ningsingduna
-
-            Pirage Bidai
-            Naphamda khudol Oina
-
-            Naning Tamjakhro
-            Yetlaroi Amuk Hanna
-
-            Oijage Nangi
-            Awaba Khuding
-            Eigi
-
-            Amuk Hanna
-            Uba Fhangdana
-            Leikhrage
-
-            Nganlamba Meirisu
-            Mutkhare
-
-            Leihouri Meirigi
-            Meishadi
-
-            Nganlamba Meirisu
-            Mutkhare
-
-            Leihouri Meirigi
-            Meishadi
-
-            Saramba Nang Eigi
-            Manglaan
-
-            Aremba Oihoure
-            Edom Leihoure
-            Edom Leihoure
-            Edom Leihoure
-
-            Thengnashi Mathanggi
-            Mapokta
-
-            Lak uko
-            Eigi Oina
-        </div>
+            Amuk Hanna<br>
+            Uba Fhangdana<br>
+            Leikhrage<br>
+            <br>
+            Nganlamba Meirisu<br>
+            Mutkhare<br>
+            <br>
+            Leihouri Meirigi<br>
+            Meishadi<br>
+            <br>
+            Nganlamba Meirisu<br>
+            Mutkhare<br>
+            <br>
+            Leihouri Meirigi<br>
+            Meishadi<br>
+            <br>
+            Saramba Nang Eigi<br>
+            Manglaan<br>
+            <br>
+            Aremba Oihoure<br>
+            Edom Leihoure<br>
+            Edom Leihoure<br>
+            Edom Leihoure<br>
+            <br>
+            Thengnashi Mathanggi<br>
+            Mapokta<br>
+            <br>
+            Lak uko<br>
+            Eigi Oina<br>
+            </div>
+        </div>        
         <button class="download-btn" id="downloadBtn">Download</button>
     </div>
 
